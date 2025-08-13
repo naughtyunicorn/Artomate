@@ -1,0 +1,57 @@
+# Auto-merge configuration for Artomate
+# This file configures automatic merging of pull requests
+
+# Enable auto-merge for specific conditions
+autoMerge:
+  # Auto-merge when all checks pass and review is approved
+  enabled: true
+  
+  # Require status checks to pass
+  requiredStatusChecks:
+    - "ci"
+    - "lint"
+    - "build"
+  
+  # Require pull request reviews
+  requiredReviews: 1
+  
+  # Require review from code owners
+  requireCodeOwnerReviews: true
+  
+  # Dismiss stale reviews when new commits are pushed
+  dismissStaleReviews: true
+  
+  # Require branches to be up to date
+  requireUpToDateBranch: true
+  
+  # Auto-merge only for specific labels
+  requiredLabels:
+    - "auto-merge"
+  
+  # Block auto-merge for specific labels
+  blockedLabels:
+    - "do-not-merge"
+    - "work-in-progress"
+    - "needs-review"
+  
+  # Block auto-merge for specific file types
+  blockedPaths:
+    - "package-lock.json"
+    - "yarn.lock"
+    - "pnpm-lock.yaml"
+  
+  # Block auto-merge for major version bumps
+  blockedPatterns:
+    - "major"
+    - "breaking"
+  
+  # Merge strategy (squash, merge, or rebase)
+  mergeMethod: "squash"
+  
+  # Commit message template for squash merges
+  commitMessageTemplate: |
+    {title} (#{number})
+    
+    {body}
+    
+    Closes #{number}

@@ -1,0 +1,30 @@
+# Global owners
+* @treyschmitt
+
+# Frontend components
+/src/components/ @treyschmitt
+/src/pages/ @treyschmitt
+/src/ui/ @treyschmitt
+
+# Services and API
+/src/services/ @treyschmitt
+
+# Configuration files
+*.config.js @treyschmitt
+*.config.ts @treyschmitt
+package.json @treyschmitt
+vite.config.js @treyschmitt
+
+# Documentation
+README.md @treyschmitt
+CONTRIBUTING.md @treyschmitt
+CHANGELOG.md @treyschmitt
+docs/ @treyschmitt
+
+# GitHub workflows and templates
+.github/ @treyschmitt
+
+# Security and legal
+SECURITY.md @treyschmitt
+LICENSE @treyschmitt
+CODE_OF_CONDUCT.md @treyschmitt

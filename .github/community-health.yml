@@ -1,0 +1,90 @@
+# Community Health Files for Artomate
+# This file configures community health features
+
+# Enable community health files
+communityHealth:
+  enabled: true
+  
+  # Files to include
+  files:
+    - "CODE_OF_CONDUCT.md"
+    - "CONTRIBUTING.md"
+    - "SECURITY.md"
+    - "SUPPORT.md"
+    - "CHANGELOG.md"
+    - "README.md"
+  
+  # Repository topics for discoverability
+  topics:
+    - "ai"
+    - "content-creation"
+    - "marketing"
+    - "social-media"
+    - "react"
+    - "firebase"
+    - "stripe"
+    - "gemini-ai"
+    - "saas"
+    - "open-source"
+  
+  # Repository description
+  description: "AI-Powered Content Creation Suite for artists and creators"
+  
+  # Repository website
+  homepage: "https://artomate.com"
+  
+  # Repository language
+  language: "JavaScript"
+  
+  # License information
+  license: "MIT"
+  
+  # Default branch
+  defaultBranch: "main"
+  
+  # Branch protection rules
+  branchProtection:
+    main:
+      requiredStatusChecks:
+        - "ci"
+        - "lint"
+        - "build"
+      requiredReviews: 1
+      requireCodeOwnerReviews: true
+      dismissStaleReviews: true
+      requireUpToDateBranch: true
+      allowForcePushes: false
+      allowDeletions: false
+  
+  # Issue templates
+  issueTemplates:
+    - "bug_report.md"
+    - "feature_request.md"
+  
+  # Pull request template
+  pullRequestTemplate: "pull_request_template.md"
+  
+  # Community guidelines
+  guidelines:
+    - "Be respectful and inclusive"
+    - "Help others when possible"
+    - "Provide constructive feedback"
+    - "Follow the project's code of conduct"
+  
+  # Support channels
+  support:
+    - "GitHub Issues"
+    - "GitHub Discussions"
+    - "Discord Community"
+    - "Email Support"
+  
+  # Contribution areas
+  contributionAreas:
+    - "Frontend Development"
+    - "Backend Services"
+    - "AI Integration"
+    - "UI/UX Design"
+    - "Documentation"
+    - "Testing"
+    - "Performance Optimization"
+    - "Security"

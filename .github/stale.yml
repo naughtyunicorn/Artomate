@@ -1,0 +1,46 @@
+# Configuration for Stale
+# https://github.com/actions/stale
+
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 60
+
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 7
+
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - pinned
+  - security
+  - breaking change
+  - priority: high
+  - status: in progress
+  - wontfix
+
+# Set to true to ignore issues in a project
+exemptProjects: false
+
+# Set to true to ignore issues in a milestone
+exemptMilestones: false
+
+# Set to true to ignore issues with an assignee
+exemptAssignees: false
+
+# Set to true to ignore issues with a reviewer
+exemptReviewers: false
+
+# Label to use when marking an issue as stale
+staleLabel: "no-activity"
+
+# Comment to post when marking an issue as stale
+markComment: |
+  This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions.
+
+# Comment to post when closing a stale issue
+closeComment: |
+  This issue has been automatically closed due to inactivity. If you believe this issue is still relevant, please feel free to reopen it or create a new one.
+
+# Limit the number of actions per hour, from 1-30
+limitPerRun: 30
+
+# Optionally, specify the repository to create issues and pull requests in
+repoToken: ${{ secrets.GITHUB_TOKEN }}
