@@ -47,17 +47,26 @@
         import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
         
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyDZi3X4jtcf1dsqLAwmGbxaFgwdH7pQ0vs",
+            authDomain: "c-arto.firebaseapp.com",
+            projectId: "c-arto",
+            storageBucket: "c-arto.firebasestorage.app",
+            messagingSenderId: "165319001087",
+            appId: "1:165319001087:web:4d191347093583e2b45dca",
+            measurementId: "G-4YR6XE7H60"
         };
         
         const app = initializeApp(firebaseConfig);
         window.firebaseAuth = getAuth(app);
         window.firebaseDb = getFirestore(app);
+        
+        // Initialize Firebase Analytics
+        try {
+            const analytics = getAnalytics(app);
+            window.firebaseAnalytics = analytics;
+        } catch (error) {
+            console.log('Analytics not available:', error);
+        }
     </script>
     
     <!-- Stripe -->
